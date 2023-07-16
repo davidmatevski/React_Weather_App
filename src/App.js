@@ -13,12 +13,12 @@ function App() {
     setErrorMessage("");
     try {
       const response = await axios.get(
-        `http://api.openweathermap.org/data/2.5/weather?q=${input}&appid=${"c87985b002bcb6c05ba5a63b75e6b421"}&units=metric`
+        `http://api.openweathermap.org/data/2.5/weather?q=${input}&appid=${process.env.REACT_APP_WEATHER_API_KEY}&units=metric`
       );
       setWeather(response.data);
 
       const forecastResponse = await axios.get(
-        `http://api.openweathermap.org/data/2.5/forecast?q=${input}&appid=${"c87985b002bcb6c05ba5a63b75e6b421"}&units=metric`
+        `http://api.openweathermap.org/data/2.5/forecast?q=${input}&appid=${process.env.REACT_APP_WEATHER_API_KEY}&units=metric`
       );
       setForecast(forecastResponse.data.list);
       setInput("");

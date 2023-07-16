@@ -9,10 +9,12 @@
   align-items: center;
   justify-content: center;
 }
+
 .title {
   padding-top: 3px;
   padding-bottom: 10px;
 }
+
 * {
   padding-top: 3px;
   padding-bottom: 3px;
