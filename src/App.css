@@ -1,32 +1,90 @@
 .App {
   text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
   background-color: #282c34;
+  color: #f8f9fa;
+  padding: 20px;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+}
+.title {
+  padding-top: 3px;
+  padding-bottom: 10px;
+}
+* {
+  padding-top: 3px;
+  padding-bottom: 3px;
 }
 
-.App-link {
-  color: #61dafb;
+.weather-data,
+.forecast-data {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  width: 100%;
 }
+
+.weather-header,
+.forecast-time-temp {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.weather-details {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.forecast-time-temp {
+  flex-direction: row;
+}
+
+.forecast-icon {
+  height: 50px;
+  width: 50px;
+}
+
+/* Styles for the input field and button */
+.input-group {
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.input-group .form-control {
+  background-color: #444c56; /* Darker shade of grey */
+  color: #f8f9fa; /* Light grey for the text */
+  border: none;
+  border-right: none;
+}
+
+.input-group .form-control:focus {
+  outline: none;
+  box-shadow: none;
+  background-color: #444c56;
+}
+
+.input-group .btn {
+  background-color: #61dafb; /* Using the blue from .App-link */
+  color: #282c34; /* Dark grey for the text */
+  border: none;
+}
+
+.input-group .btn:focus {
+  outline: none;
+  box-shadow: none;
+  background-color: #61dafb;
+}
+
+/* Rest of your CSS rules... */
 
 @keyframes App-logo-spin {
   from {
